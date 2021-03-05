@@ -17,7 +17,7 @@ class Solution {
     int maxSum = Integer.MIN_VALUE;
     /**
      * IMPORTANT POINTS
-     * if current node is involved in the path, can have both left and right gain.
+     * if current node is root node, can have both left and right gain.
      * if current node is NOT involved in the path (meaning returning to parent), 
      * can only have left or right gain
      */
@@ -36,7 +36,7 @@ class Solution {
         //update global maxSum if curMaxSum is larger
         maxSum = Math.max(maxSum, curMaxSum);
         
-        
+        //current node is not root - can only have left or right gain
         return node.val + Math.max(leftGain, rightGain);
     }
     public int maxPathSum(TreeNode root) {
