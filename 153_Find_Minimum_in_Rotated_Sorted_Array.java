@@ -21,6 +21,25 @@ class Solution {
 }
 
 /*
+Alternative if statement
+    //pre: a rotated sorted array in ascending order
+    //post: returns the index of piviot point A.K.A min num
+    private int findPivot(int[] nums){
+        int L = 0;
+        int R = nums.length-1;
+        while(L < R) {
+            int mid = (L+R)/2;
+            if (nums[mid] > nums[R]) {
+                L = mid+1;
+            } else {
+                R = mid;
+            }
+        }
+        return nums[L];
+    }
+ */
+
+/*
  * solution to find the maximum
 class Solution {
     public int findMin(int[] nums) {
