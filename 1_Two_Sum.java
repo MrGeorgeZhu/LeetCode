@@ -1,3 +1,5 @@
+//time complexity: O(n)
+//space complexity: O(n)
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
